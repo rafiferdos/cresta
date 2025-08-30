@@ -1,7 +1,12 @@
-import { NextRequest, NextResponse } from "next/server";
-import { getItemById, updateItem, deleteItem, UpdateItemData } from "@/lib/items";
+import { NextRequest, NextResponse } from 'next/server'
+import {
+  getItemById,
+  updateItem,
+  deleteItem,
+  UpdateItemData,
+} from '@/lib/items'
 
-export const runtime = "nodejs";
+export const runtime = 'nodejs'
 
 // GET /api/items/[id] - Get specific item
 export async function GET(
@@ -9,32 +14,32 @@ export async function GET(
   { params }: { params: { id: string } }
 ) {
   try {
-    const item = await getItemById(params.id);
-    
+    const item = await getItemById(params.id)
+
     if (!item) {
       return NextResponse.json(
         {
           success: false,
-          error: "Item not found",
+          error: 'Item not found',
         },
         { status: 404 }
-      );
+      )
     }
 
     return NextResponse.json({
       success: true,
       data: item,
-    });
+    })
   } catch (error) {
-    console.error(`GET /api/items/${params.id} error:`, error);
+    console.error(`GET /api/items/${params.id} error:`, error)
     return NextResponse.json(
       {
         success: false,
-        error: "Failed to fetch item",
-        message: error instanceof Error ? error.message : "Unknown error",
+        error: 'Failed to fetch item',
+        message: error instanceof Error ? error.message : 'Unknown error',
       },
       { status: 500 }
-    );
+    )
   }
 }
 
@@ -44,75 +49,75 @@ export async function PUT(
   { params }: { params: { id: string } }
 ) {
   try {
-    const body = await request.json();
-    
+    const body = await request.json()
+
     // Validate data if provided
-    const updateData: UpdateItemData = {};
-    
+    const updateData: UpdateItemData = {}
+
     if (body.title !== undefined) {
       if (!body.title.trim()) {
         return NextResponse.json(
           {
             success: false,
-            error: "Title cannot be empty",
+            error: 'Title cannot be empty',
           },
           { status: 400 }
-        );
+        )
       }
-      updateData.title = body.title.trim();
+      updateData.title = body.title.trim()
     }
 
     if (body.price !== undefined) {
-      if (typeof body.price !== "number" || body.price < 0) {
+      if (typeof body.price !== 'number' || body.price < 0) {
         return NextResponse.json(
           {
             success: false,
-            error: "Valid price is required",
+            error: 'Valid price is required',
           },
           { status: 400 }
-        );
+        )
       }
-      updateData.price = Number(body.price);
+      updateData.price = Number(body.price)
     }
 
     if (body.description !== undefined) {
-      updateData.description = body.description.trim();
+      updateData.description = body.description.trim()
     }
 
     if (body.category !== undefined) {
-      updateData.category = body.category.trim();
+      updateData.category = body.category.trim()
     }
 
     if (body.imageUrl !== undefined) {
-      updateData.imageUrl = body.imageUrl.trim();
+      updateData.imageUrl = body.imageUrl.trim()
     }
 
-    const updated = await updateItem(params.id, updateData);
-    
+    const updated = await updateItem(params.id, updateData)
+
     if (!updated) {
       return NextResponse.json(
         {
           success: false,
-          error: "Item not found or no changes made",
+          error: 'Item not found or no changes made',
         },
         { status: 404 }
-      );
+      )
     }
 
     return NextResponse.json({
       success: true,
-      message: "Item updated successfully",
-    });
+      message: 'Item updated successfully',
+    })
   } catch (error) {
-    console.error(`PUT /api/items/${params.id} error:`, error);
+    console.error(`PUT /api/items/${params.id} error:`, error)
     return NextResponse.json(
       {
         success: false,
-        error: "Failed to update item",
-        message: error instanceof Error ? error.message : "Unknown error",
+        error: 'Failed to update item',
+        message: error instanceof Error ? error.message : 'Unknown error',
       },
       { status: 500 }
-    );
+    )
   }
 }
 
@@ -122,31 +127,31 @@ export async function DELETE(
   { params }: { params: { id: string } }
 ) {
   try {
-    const deleted = await deleteItem(params.id);
-    
+    const deleted = await deleteItem(params.id)
+
     if (!deleted) {
       return NextResponse.json(
         {
           success: false,
-          error: "Item not found",
+          error: 'Item not found',
         },
         { status: 404 }
-      );
+      )
     }
 
     return NextResponse.json({
       success: true,
-      message: "Item deleted successfully",
-    });
+      message: 'Item deleted successfully',
+    })
   } catch (error) {
-    console.error(`DELETE /api/items/${params.id} error:`, error);
+    console.error(`DELETE /api/items/${params.id} error:`, error)
     return NextResponse.json(
       {
         success: false,
-        error: "Failed to delete item",
-        message: error instanceof Error ? error.message : "Unknown error",
+        error: 'Failed to delete item',
+        message: error instanceof Error ? error.message : 'Unknown error',
       },
       { status: 500 }
-    );
+    )
   }
 }
