@@ -1,4 +1,9 @@
-import { getItems } from '@/lib/items'
+import { getItems, Item } from "@/lib/items";
+import Image from "next/image";
+
+export default async function Home() {
+  let items: Item[] = [];
+  let error = null;t { getItems } from '@/lib/items'
 
 export default async function Home() {
   let items = []
