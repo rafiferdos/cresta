@@ -1,8 +1,8 @@
-import React from 'react'
+import React from 'react';
 
 const page = () => {
   return (
-    <>
+    <div>
       <h1 contentEditable={true} spellCheck={false}>
         Made by cubiq.
       </h1>
@@ -547,7 +547,7 @@ const page = () => {
             diffuseConstant='1'
             surfaceScale='100'
           >
-            <feDistantLight azimuth='225' elevation='180' />
+            <feDistantLight azimuth='225' elevation='180'></feDistantLight>
           </feDiffuseLighting>
           <feColorMatrix type='luminanceToAlpha' />
           <feColorMatrix
@@ -563,9 +563,9 @@ const page = () => {
             diffuseConstant='0.52'
             surfaceScale='100'
           >
-            <feDistantLight azimuth='45' elevation='180' />
+            <feDistantLight azimuth='45' elevation='180'></feDistantLight>
           </feDiffuseLighting>
-          <feColorMatrix type='luminanceToAlpha' />
+          <feColorMatrix type='luminanceToAlpha'></feColorMatrix>
           <feColorMatrix
             result='side-yellow'
             values='
@@ -580,7 +580,7 @@ const page = () => {
             diffuseConstant='1'
             surfaceScale='100'
           >
-            <feDistantLight azimuth='315' elevation='180' />
+            <feDistantLight azimuth='315' elevation='180'></feDistantLight>
           </feDiffuseLighting>
           <feColorMatrix type='luminanceToAlpha' />
           <feColorMatrix
@@ -597,7 +597,7 @@ const page = () => {
             diffuseConstant='1'
             surfaceScale='100'
           >
-            <feDistantLight azimuth='135' elevation='180' />
+            <feDistantLight azimuth='135' elevation='180'></feDistantLight>
           </feDiffuseLighting>
           <feColorMatrix
             result='color-matrix-0'
@@ -687,8 +687,8 @@ const page = () => {
           <feBlend result='outlined-balls' in='SourceGraphic' mode='overlay' />
         </filter>
       </svg>
-    </>
+    </div>
   )
-}
+};
 
-export default page
+export default page;
