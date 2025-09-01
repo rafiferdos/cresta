@@ -63,7 +63,7 @@ export function AbstractBackground() {
       {balls.map((ball) => (
         <motion.div
           key={ball.id}
-          className='absolute rounded-full blur-xl opacity-60'
+          className='absolute rounded-full opacity-60'
           style={{
             width: ball.size,
             height: ball.size,
