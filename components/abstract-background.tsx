@@ -43,7 +43,7 @@ export function AbstractBackground() {
         { x: 70, y: 60 }, // Bottom right area
         { x: 40, y: 80 }, // Bottom center area
       ]
-      
+
       for (let i = 0; i < 3; i++) {
         newBalls.push({
           id: i,
