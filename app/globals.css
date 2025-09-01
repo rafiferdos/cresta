@@ -400,24 +400,8 @@ body {
     rgba(255, 255, 255, 0.2) 360deg
   ) 1;
 }
-      transparent 90deg
-    ),
-    conic-gradient(
-      from 270deg at 0% 100%,
-      rgba(255, 255, 255, 0.3) 0deg,
-      transparent 90deg
-    );
-  opacity: 0.8;
-  mix-blend-mode: overlay;
-  border-radius: inherit;
-  pointer-events: none;
-}
 
-.liquid-glass-distort::after {
-  content: '';
-  position: absolute;
-  inset: 1px;
-  background: linear-gradient(
+/* Liquid Glass Components */
     135deg,
     rgba(255, 255, 255, 0.1) 0%,
     transparent 30%,
