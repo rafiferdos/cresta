@@ -68,6 +68,7 @@ DB_NAME="cresta"
 ## 🎯 Navigation
 
 The navbar includes:
+
 - **Logo**: Animated Cresta branding
 - **Categories**: Product categories
 - **Trending**: Popular items
