@@ -2,7 +2,6 @@ import type { Metadata } from 'next'
 import { Geist, Geist_Mono } from 'next/font/google'
 import './globals.css'
 
-
 const geistSans = Geist({
   variable: '--font-geist-sans',
   subsets: ['latin'],
@@ -24,13 +23,20 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang='en'>
+    <html lang='en' className='h-full'>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased relative`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased relative h-full min-h-screen`}
+        style={{
+          backgroundImage: 'url(/city-bg.jpg)',
+          backgroundAttachment: 'fixed',
+          backgroundSize: 'cover',
+          backgroundRepeat: 'no-repeat',
+          backgroundPosition: 'center center',
+          backgroundColor: 'rgba(0, 0, 0, 0.3)',
+          backgroundBlendMode: 'overlay',
+        }}
       >
-        <div className='relative z-10'>
-          {children}
-        </div>
+        <div className='relative z-10 min-h-screen'>{children}</div>
       </body>
     </html>
   )
