@@ -1,17 +1,8 @@
-'use client'
+"use client"
 
 import Image from 'next/image'
 import { motion } from 'motion/react'
 import { Heart, ShoppingBag, Plus, Store, AlertCircle, Sparkles, TrendingUp } from 'lucide-react'
-  Heart,
-  ShoppingBag,
-  Plus,
-  Store,
-  AlertCircle,
-  Sparkles,
-  TrendingUp,
-  Zap,
-} from 'lucide-react'
 
 import { Button } from '@/components/ui/button'
 import {
