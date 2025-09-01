@@ -102,7 +102,226 @@ body {
   border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-/* Liquid Glass Components */
+/* Authentic Liquid Glass Effect - Bends corners and distorts content */
+.liquid-glass {
+  position: relative;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.liquid-glass::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    radial-gradient(circle at 20% 20%, rgba(255, 255, 255, 0.3) 0%, transparent 50%),
+    radial-gradient(circle at 80% 80%, rgba(255, 255, 255, 0.2) 0%, transparent 50%),
+    radial-gradient(circle at 40% 60%, rgba(255, 255, 255, 0.1) 0%, transparent 50%);
+  border-radius: inherit;
+  pointer-events: none;
+}
+
+.liquid-glass::after {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(45deg, 
+    rgba(255, 255, 255, 0.1), 
+    rgba(255, 255, 255, 0.05), 
+    rgba(255, 255, 255, 0.1)
+  );
+  border-radius: inherit;
+  z-index: -1;
+  filter: blur(1px);
+}
+
+/* Liquid Glass with Corner Distortion */
+.liquid-glass-distort {
+  position: relative;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 24px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(12px) saturate(180%);
+  overflow: hidden;
+  clip-path: polygon(
+    0% 8%, 8% 0%, 92% 0%, 100% 8%,
+    100% 92%, 92% 100%, 8% 100%, 0% 92%
+  );
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.liquid-glass-distort::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    conic-gradient(from 0deg at 0% 0%, 
+      rgba(255, 255, 255, 0.4) 0deg, 
+      transparent 90deg),
+    conic-gradient(from 90deg at 100% 0%, 
+      rgba(255, 255, 255, 0.3) 0deg, 
+      transparent 90deg),
+    conic-gradient(from 180deg at 100% 100%, 
+      rgba(255, 255, 255, 0.2) 0deg, 
+      transparent 90deg),
+    conic-gradient(from 270deg at 0% 100%, 
+      rgba(255, 255, 255, 0.3) 0deg, 
+      transparent 90deg);
+  opacity: 0.8;
+  mix-blend-mode: overlay;
+  border-radius: inherit;
+  pointer-events: none;
+}
+
+.liquid-glass-distort::after {
+  content: '';
+  position: absolute;
+  inset: 1px;
+  background: linear-gradient(135deg, 
+    rgba(255, 255, 255, 0.1) 0%, 
+    transparent 30%, 
+    transparent 70%, 
+    rgba(255, 255, 255, 0.05) 100%
+  );
+  border-radius: inherit;
+  pointer-events: none;
+}
+
+.liquid-glass-distort:hover {
+  transform: translateY(-2px);
+  box-shadow: 
+    0 10px 40px rgba(0, 0, 0, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.3);
+}
+
+/* Liquid Glass Bento Style */
+.liquid-glass-bento {
+  position: relative;
+  background: rgba(255, 255, 255, 0.06);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(16px) saturate(120%);
+  overflow: hidden;
+  mask: 
+    radial-gradient(20px at 20px 20px, transparent 50%, black 51%),
+    radial-gradient(20px at calc(100% - 20px) 20px, transparent 50%, black 51%),
+    radial-gradient(20px at 20px calc(100% - 20px), transparent 50%, black 51%),
+    radial-gradient(20px at calc(100% - 20px) calc(100% - 20px), transparent 50%, black 51%);
+  mask-composite: intersect;
+}
+
+.liquid-glass-bento::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    radial-gradient(ellipse at top left, rgba(255, 255, 255, 0.2) 0%, transparent 60%),
+    radial-gradient(ellipse at top right, rgba(255, 255, 255, 0.15) 0%, transparent 60%),
+    radial-gradient(ellipse at bottom left, rgba(255, 255, 255, 0.1) 0%, transparent 60%),
+    radial-gradient(ellipse at bottom right, rgba(255, 255, 255, 0.15) 0%, transparent 60%);
+  border-radius: inherit;
+  pointer-events: none;
+  animation: liquid-flow 8s ease-in-out infinite;
+}
+
+@keyframes liquid-flow {
+  0%, 100% {
+    transform: scale(1) rotate(0deg);
+    opacity: 0.8;
+  }
+  33% {
+    transform: scale(1.05) rotate(1deg);
+    opacity: 0.9;
+  }
+  66% {
+    transform: scale(0.98) rotate(-0.5deg);
+    opacity: 0.7;
+  }
+}
+
+/* Liquid Glass Morphic */
+.liquid-glass-morphic {
+  position: relative;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 30px;
+  border: 2px solid;
+  border-image: linear-gradient(135deg, 
+    rgba(255, 255, 255, 0.3), 
+    rgba(255, 255, 255, 0.1), 
+    rgba(255, 255, 255, 0.05), 
+    rgba(255, 255, 255, 0.2)
+  ) 1;
+  backdrop-filter: blur(20px) saturate(150%);
+  overflow: hidden;
+  filter: drop-shadow(0 8px 32px rgba(0, 0, 0, 0.1));
+}
+
+.liquid-glass-morphic::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: conic-gradient(
+    from 0deg,
+    rgba(255, 255, 255, 0.1) 0deg,
+    rgba(255, 255, 255, 0.3) 60deg,
+    rgba(255, 255, 255, 0.05) 120deg,
+    rgba(255, 255, 255, 0.2) 180deg,
+    rgba(255, 255, 255, 0.1) 240deg,
+    rgba(255, 255, 255, 0.25) 300deg,
+    rgba(255, 255, 255, 0.1) 360deg
+  );
+  animation: liquid-rotate 15s linear infinite;
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+@keyframes liquid-rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Dark mode adaptations */
+.dark .liquid-glass {
+  background: rgba(0, 0, 0, 0.2);
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+.dark .liquid-glass-distort {
+  background: rgba(0, 0, 0, 0.15);
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
+.dark .liquid-glass-bento {
+  background: rgba(0, 0, 0, 0.12);
+  border-color: rgba(255, 255, 255, 0.06);
+}
+
+.dark .liquid-glass-morphic {
+  background: rgba(0, 0, 0, 0.1);
+}
 .liquid-glass-wrapper {
   position: relative;
   display: inline-block;
