@@ -91,7 +91,7 @@ export function MarketplaceContent({ items, error }: MarketplaceContentProps) {
               Experience our marketplace with authentic liquid glass effects
             </p>
           </div>
-          
+
           {/* Quick Examples Grid */}
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>
             {/* Basic Liquid Glass */}
@@ -99,31 +99,39 @@ export function MarketplaceContent({ items, error }: MarketplaceContentProps) {
               <div className='text-2xl mb-3'>🛍️</div>
               <h3 className='font-semibold mb-2'>Shop</h3>
               <p className='text-sm opacity-80'>Basic liquid glass card</p>
-              <p className='text-xs mt-3 font-mono text-primary'>.liquid-glass</p>
+              <p className='text-xs mt-3 font-mono text-primary'>
+                .liquid-glass
+              </p>
             </div>
-            
+
             {/* Distort Effect */}
             <div className='liquid-glass-distort p-6'>
               <div className='text-2xl mb-3'>🎨</div>
               <h3 className='font-semibold mb-2'>Design</h3>
               <p className='text-sm opacity-80'>Corner distortion effect</p>
-              <p className='text-xs mt-3 font-mono text-primary'>.liquid-glass-distort</p>
+              <p className='text-xs mt-3 font-mono text-primary'>
+                .liquid-glass-distort
+              </p>
             </div>
-            
+
             {/* Bento Style */}
             <div className='liquid-glass-bento p-6'>
               <div className='text-2xl mb-3'>💫</div>
               <h3 className='font-semibold mb-2'>Flow</h3>
               <p className='text-sm opacity-80'>Animated flow effect</p>
-              <p className='text-xs mt-3 font-mono text-primary'>.liquid-glass-bento</p>
+              <p className='text-xs mt-3 font-mono text-primary'>
+                .liquid-glass-bento
+              </p>
             </div>
-            
+
             {/* Morphic Style */}
             <div className='liquid-glass-morphic p-6'>
               <div className='text-2xl mb-3'>✨</div>
               <h3 className='font-semibold mb-2'>Premium</h3>
               <p className='text-sm opacity-80'>Rotating gradients</p>
-              <p className='text-xs mt-3 font-mono text-primary'>.liquid-glass-morphic</p>
+              <p className='text-xs mt-3 font-mono text-primary'>
+                .liquid-glass-morphic
+              </p>
             </div>
           </div>
         </motion.div>
@@ -264,12 +272,17 @@ export function MarketplaceContent({ items, error }: MarketplaceContentProps) {
                     className='group'
                   >
                     {/* Use different liquid glass effects for variety */}
-                    <div className={`overflow-hidden h-full flex flex-col ${
-                      index % 4 === 0 ? 'liquid-glass-distort' : 
-                      index % 4 === 1 ? 'liquid-glass-bento' :
-                      index % 4 === 2 ? 'liquid-glass-morphic' :
-                      'liquid-glass'
-                    } p-6 hover:bg-white/5 transition-all duration-300`}>
+                    <div
+                      className={`overflow-hidden h-full flex flex-col ${
+                        index % 4 === 0
+                          ? 'liquid-glass-distort'
+                          : index % 4 === 1
+                          ? 'liquid-glass-bento'
+                          : index % 4 === 2
+                          ? 'liquid-glass-morphic'
+                          : 'liquid-glass'
+                      } p-6 hover:bg-white/5 transition-all duration-300`}
+                    >
                       {/* Image */}
                       {item.imageUrl ? (
                         <div className='aspect-square bg-muted/20 overflow-hidden relative rounded-xl mb-4'>
@@ -331,8 +344,7 @@ export function MarketplaceContent({ items, error }: MarketplaceContentProps) {
                         <motion.div
                           whileHover={{ scale: 1.1 }}
                           whileTap={{ scale: 0.9 }}
-                        >
-                        </motion.div>
+                        ></motion.div>
                         <motion.div whileHover={{ scale: 1.05 }}>
                           <Button
                             variant='outline'
