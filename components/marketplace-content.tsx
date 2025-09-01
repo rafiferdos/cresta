@@ -1,11 +1,27 @@
-"use client"
+'use client'
 
 import Image from 'next/image'
 import { motion } from 'motion/react'
-import { Heart, ShoppingBag, Plus, Store, AlertCircle, Sparkles, TrendingUp, Zap } from 'lucide-react'
+import { Heart, ShoppingBag, Plus, Store, AlertCircle, Sparkles, TrendingUp } from 'lucide-react'
+  Heart,
+  ShoppingBag,
+  Plus,
+  Store,
+  AlertCircle,
+  Sparkles,
+  TrendingUp,
+  Zap,
+} from 'lucide-react'
 
 import { Button } from '@/components/ui/button'
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card'
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
 import { Item } from '@/lib/items'
 
@@ -32,9 +48,11 @@ export function MarketplaceContent({ items, error }: MarketplaceContentProps) {
             className='inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 backdrop-blur-sm border border-primary/20'
           >
             <Sparkles className='h-4 w-4 text-primary' />
-            <span className='text-sm font-medium text-primary'>AI-Powered Marketplace</span>
+            <span className='text-sm font-medium text-primary'>
+              AI-Powered Marketplace
+            </span>
           </motion.div>
-          
+
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -47,14 +65,15 @@ export function MarketplaceContent({ items, error }: MarketplaceContentProps) {
               Products
             </span>
           </motion.h1>
-          
+
           <motion.p
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.6, duration: 0.8 }}
             className='text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed'
           >
-            Experience the future of shopping with our intelligent marketplace that understands your needs and preferences
+            Experience the future of shopping with our intelligent marketplace
+            that understands your needs and preferences
           </motion.p>
         </motion.div>
 
@@ -73,14 +92,17 @@ export function MarketplaceContent({ items, error }: MarketplaceContentProps) {
                     <AlertCircle className='h-8 w-8 text-destructive' />
                   </div>
                 </div>
-                <CardTitle className='text-destructive text-xl'>Connection Error</CardTitle>
+                <CardTitle className='text-destructive text-xl'>
+                  Connection Error
+                </CardTitle>
                 <CardDescription className='text-destructive/80 text-base'>
                   {error}
                 </CardDescription>
               </CardHeader>
               <CardFooter className='justify-center pt-0'>
                 <p className='text-sm text-muted-foreground text-center'>
-                  Make sure MongoDB is connected and check your environment variables.
+                  Make sure MongoDB is connected and check your environment
+                  variables.
                 </p>
               </CardFooter>
             </Card>
@@ -104,18 +126,31 @@ export function MarketplaceContent({ items, error }: MarketplaceContentProps) {
                         Marketplace Collection
                       </CardTitle>
                       <CardDescription className='text-base'>
-                        {items.length} {items.length === 1 ? 'exceptional item' : 'exceptional items'} curated for you
+                        {items.length}{' '}
+                        {items.length === 1
+                          ? 'exceptional item'
+                          : 'exceptional items'}{' '}
+                        curated for you
                       </CardDescription>
                     </div>
                     <div className='flex gap-3'>
-                      <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+                      <motion.div
+                        whileHover={{ scale: 1.05 }}
+                        whileTap={{ scale: 0.95 }}
+                      >
                         <Button className='cursor-pointer gap-2 px-6 shadow-lg hover:shadow-xl transition-all duration-200'>
                           <Plus className='h-4 w-4' />
                           Add Item
                         </Button>
                       </motion.div>
-                      <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-                        <Button variant='outline' className='cursor-pointer gap-2 px-6 backdrop-blur-sm hover:bg-accent/50 transition-all duration-200'>
+                      <motion.div
+                        whileHover={{ scale: 1.05 }}
+                        whileTap={{ scale: 0.95 }}
+                      >
+                        <Button
+                          variant='outline'
+                          className='cursor-pointer gap-2 px-6 backdrop-blur-sm hover:bg-accent/50 transition-all duration-200'
+                        >
                           <TrendingUp className='h-4 w-4' />
                           Analytics
                         </Button>
@@ -147,11 +182,18 @@ export function MarketplaceContent({ items, error }: MarketplaceContentProps) {
                         Your marketplace awaits
                       </CardTitle>
                       <CardDescription className='text-lg max-w-md mx-auto leading-relaxed'>
-                        Start building your amazing marketplace by adding your first product and watch the magic happen
+                        Start building your amazing marketplace by adding your
+                        first product and watch the magic happen
                       </CardDescription>
                     </div>
-                    <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-                      <Button size='lg' className='cursor-pointer gap-3 px-8 py-6 text-base shadow-xl hover:shadow-2xl transition-all duration-200'>
+                    <motion.div
+                      whileHover={{ scale: 1.05 }}
+                      whileTap={{ scale: 0.95 }}
+                    >
+                      <Button
+                        size='lg'
+                        className='cursor-pointer gap-3 px-8 py-6 text-base shadow-xl hover:shadow-2xl transition-all duration-200'
+                      >
                         <Plus className='h-5 w-5' />
                         Add Your First Item
                       </Button>
@@ -212,7 +254,10 @@ export function MarketplaceContent({ items, error }: MarketplaceContentProps) {
                             ${item.price.toFixed(2)}
                           </span>
                           {item.category && (
-                            <Badge variant='secondary' className='bg-primary/10 text-primary border-primary/20 backdrop-blur-sm'>
+                            <Badge
+                              variant='secondary'
+                              className='bg-primary/10 text-primary border-primary/20 backdrop-blur-sm'
+                            >
                               {item.category}
                             </Badge>
                           )}
@@ -221,8 +266,8 @@ export function MarketplaceContent({ items, error }: MarketplaceContentProps) {
 
                       {/* Actions */}
                       <CardFooter className='gap-3 pt-0'>
-                        <motion.div 
-                          whileHover={{ scale: 1.02 }} 
+                        <motion.div
+                          whileHover={{ scale: 1.02 }}
                           whileTap={{ scale: 0.98 }}
                           className='flex-1'
                         >
@@ -231,8 +276,15 @@ export function MarketplaceContent({ items, error }: MarketplaceContentProps) {
                             View Details
                           </Button>
                         </motion.div>
-                        <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
-                          <Button variant='outline' size='icon' className='cursor-pointer backdrop-blur-sm hover:bg-accent/50 border-border/50'>
+                        <motion.div
+                          whileHover={{ scale: 1.1 }}
+                          whileTap={{ scale: 0.9 }}
+                        >
+                          <Button
+                            variant='outline'
+                            size='icon'
+                            className='cursor-pointer backdrop-blur-sm hover:bg-accent/50 border-border/50'
+                          >
                             <Heart className='h-4 w-4' />
                           </Button>
                         </motion.div>
