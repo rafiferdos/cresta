@@ -82,7 +82,7 @@ const page = () => {
         </symbol>
       </svg>
 
-      <svg color-interpolation-filters='sRGB'>
+      <svg colorInterpolationFilters='sRGB'>
         <filter id='round'>
           <feGaussianBlur in='SourceGraphic' stdDeviation='10'></feGaussianBlur>
           <feComponentTransfer result='threshold'>
@@ -97,7 +97,7 @@ const page = () => {
         </filter>
       </svg>
 
-      <svg width='0' height='0' color-interpolation-filters='sRGB'>
+      <svg width='0' height='0' colorInterpolationFilters='sRGB'>
         <filter id='pack-lower'>
           <feColorMatrix
             type='matrix'
@@ -182,7 +182,7 @@ const page = () => {
         </filter>
       </svg>
 
-      <svg width='0' height='0' color-interpolation-filters='sRGB'>
+      <svg width='0' height='0' colorInterpolationFilters='sRGB'>
         <filter id='glass'>
           <feComponentTransfer result='SourceBackground' in='SourceGraphic'>
             <feFuncR
@@ -425,7 +425,7 @@ const page = () => {
             in2='mask-normalized'
             operator='atop'
           ></feComposite>
-          <feFlood result='flood-0' flood-color='#808000'></feFlood>
+          <feFlood result='flood-0' floodColor='#808000'></feFlood>
           <feComposite
             result='NormalMapFull'
             in='balls-masked'
@@ -489,7 +489,7 @@ const page = () => {
             dx='1'
             dy='1'
             stdDeviation='5'
-            flood-opacity='.3'
+            floodOpacity='.3'
           ></feDropShadow>
         </filter>
 
@@ -628,7 +628,7 @@ const page = () => {
           />
 
           <feComposite result='balls-map' in2='SourceMask' operator='in' />
-          <feFlood result='normal-bg-color' flood-color='#808000' />
+          <feFlood result='normal-bg-color' floodColor='#808000' />
           <feComposite
             result='NormalMapFull'
             in='balls-map'
