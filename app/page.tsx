@@ -27,9 +27,9 @@ const page = () => {
           viewBox='0 0 24 24'
           fill='none'
           stroke='currentColor'
-          stroke-width='2'
-          stroke-linecap='round'
-          stroke-linejoin='round'
+          strokeWidth='2'
+          strokeLinecap='round'
+          strokeLinejoin='round'
           className='lucide lucide-search'
         >
           <circle cx='11' cy='11' r='8'></circle>
@@ -41,9 +41,9 @@ const page = () => {
           viewBox='0 0 24 24'
           fill='none'
           stroke='currentColor'
-          stroke-width='2'
-          stroke-linecap='round'
-          stroke-linejoin='round'
+          strokeWidth='2'
+          strokeLinecap='round'
+          strokeLinejoin='round'
           className='lucide lucide-camera'
         >
           <path d='M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3z'></path>
@@ -55,9 +55,9 @@ const page = () => {
           viewBox='0 0 24 24'
           fill='none'
           stroke='currentColor'
-          stroke-width='2'
-          stroke-linecap='round'
-          stroke-linejoin='round'
+          strokeWidth='2'
+          strokeLinecap='round'
+          strokeLinejoin='round'
           className='lucide lucide-home'
         >
           <path d='m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z'></path>
@@ -69,9 +69,9 @@ const page = () => {
           viewBox='0 0 24 24'
           fill='none'
           stroke='currentColor'
-          stroke-width='2'
-          stroke-linecap='round'
-          stroke-linejoin='round'
+          strokeWidth='2'
+          strokeLinecap='round'
+          strokeLinejoin='round'
           className='lucide lucide-store'
         >
           <path d='m2 7 4.41-4.41A2 2 0 0 1 7.83 2h8.34a2 2 0 0 1 1.42.59L22 7'></path>
