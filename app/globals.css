@@ -71,10 +71,6 @@
 }
 
 /* Global Styles */
-* {
-  border-color: hsl(var(--border));
-}
-
 body {
   color: hsl(var(--foreground));
   background: hsl(var(--background));

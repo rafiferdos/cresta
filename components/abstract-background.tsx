@@ -37,12 +37,19 @@ export function AbstractBackground() {
   useEffect(() => {
     const generateBalls = () => {
       const newBalls: Ball[] = []
-      for (let i = 0; i < 3; i++) { // Only 3 balls
+      // Create 3 balls with specific positioning to ensure good spacing
+      const positions = [
+        { x: 15, y: 20 }, // Top left area
+        { x: 70, y: 60 }, // Bottom right area
+        { x: 40, y: 80 }, // Bottom center area
+      ]
+      
+      for (let i = 0; i < 3; i++) {
         newBalls.push({
           id: i,
-          x: Math.random() * 80 + 10, // Keep balls away from edges
-          y: Math.random() * 80 + 10,
-          size: Math.random() * 150 + 200, // 200-350px
+          x: positions[i].x,
+          y: positions[i].y,
+          size: Math.random() * 200 + 400, // 400-600px (much bigger)
           color: colors[Math.floor(Math.random() * colors.length)],
           duration: Math.random() * 80 + 100, // 100-180 seconds (very slow)
           delay: Math.random() * 30, // 0-30 seconds delay
@@ -77,14 +84,14 @@ export function AbstractBackground() {
           animate={{
             x: [
               `${ball.x}vw`,
-              `${(ball.x + 20) % 80 + 10}vw`, // Smaller movement range
-              `${(ball.x + 40) % 80 + 10}vw`,
+              `${((ball.x + 20) % 80) + 10}vw`, // Smaller movement range
+              `${((ball.x + 40) % 80) + 10}vw`,
               `${ball.x}vw`,
             ],
             y: [
               `${ball.y}vh`,
-              `${(ball.y + 15) % 80 + 10}vh`, // Smaller movement range
-              `${(ball.y + 30) % 80 + 10}vh`,
+              `${((ball.y + 15) % 80) + 10}vh`, // Smaller movement range
+              `${((ball.y + 30) % 80) + 10}vh`,
               `${ball.y}vh`,
             ],
           }}
