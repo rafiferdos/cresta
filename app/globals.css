@@ -483,21 +483,24 @@ html {
   left: 0;
   right: 0;
   bottom: 0;
-  background: 
-    radial-gradient(circle at 0% 0%, 
-      rgba(255, 255, 255, 0.3) 0%, 
+  background: radial-gradient(
+      circle at 0% 0%,
+      rgba(255, 255, 255, 0.3) 0%,
       transparent 70%
     ),
-    radial-gradient(circle at 100% 0%, 
-      rgba(255, 255, 255, 0.2) 0%, 
+    radial-gradient(
+      circle at 100% 0%,
+      rgba(255, 255, 255, 0.2) 0%,
       transparent 70%
     ),
-    radial-gradient(circle at 0% 100%, 
-      rgba(255, 255, 255, 0.25) 0%, 
+    radial-gradient(
+      circle at 0% 100%,
+      rgba(255, 255, 255, 0.25) 0%,
       transparent 70%
     ),
-    radial-gradient(circle at 100% 100%, 
-      rgba(255, 255, 255, 0.2) 0%, 
+    radial-gradient(
+      circle at 100% 100%,
+      rgba(255, 255, 255, 0.2) 0%,
       transparent 70%
     );
   border-radius: inherit;
@@ -526,7 +529,8 @@ html {
 }
 
 @keyframes liquid-corners {
-  0%, 100% {
+  0%,
+  100% {
     transform: scale(1);
     opacity: 0.8;
   }
@@ -543,13 +547,13 @@ html {
   border-radius: 25px;
   border: 1px solid rgba(255, 255, 255, 0.15);
   clip-path: polygon(
-    20px 0%, 
-    calc(100% - 20px) 0%, 
-    100% 20px, 
-    100% calc(100% - 20px), 
-    calc(100% - 20px) 100%, 
-    20px 100%, 
-    0% calc(100% - 20px), 
+    20px 0%,
+    calc(100% - 20px) 0%,
+    100% 20px,
+    100% calc(100% - 20px),
+    calc(100% - 20px) 100%,
+    20px 100%,
+    0% calc(100% - 20px),
     0% 20px
   );
   backdrop-filter: blur(8px) saturate(120%);
@@ -561,13 +565,13 @@ html {
 
 .liquid-glass-distort:hover {
   clip-path: polygon(
-    25px 0%, 
-    calc(100% - 15px) 0%, 
-    100% 15px, 
-    100% calc(100% - 25px), 
-    calc(100% - 25px) 100%, 
-    15px 100%, 
-    0% calc(100% - 15px), 
+    25px 0%,
+    calc(100% - 15px) 0%,
+    100% 15px,
+    100% calc(100% - 25px),
+    calc(100% - 25px) 100%,
+    15px 100%,
+    0% calc(100% - 15px),
     0% 25px
   );
   transform: rotateX(2deg) rotateY(2deg);
@@ -580,15 +584,14 @@ html {
   left: 0;
   right: 0;
   bottom: 0;
-  background: 
-    conic-gradient(
-      from 45deg,
-      rgba(255, 255, 255, 0.2) 0deg,
-      rgba(255, 255, 255, 0.05) 90deg,
-      rgba(255, 255, 255, 0.15) 180deg,
-      rgba(255, 255, 255, 0.05) 270deg,
-      rgba(255, 255, 255, 0.2) 360deg
-    );
+  background: conic-gradient(
+    from 45deg,
+    rgba(255, 255, 255, 0.2) 0deg,
+    rgba(255, 255, 255, 0.05) 90deg,
+    rgba(255, 255, 255, 0.15) 180deg,
+    rgba(255, 255, 255, 0.05) 270deg,
+    rgba(255, 255, 255, 0.2) 360deg
+  );
   clip-path: inherit;
   animation: liquid-bend 6s ease-in-out infinite;
   opacity: 0.7;
@@ -596,7 +599,8 @@ html {
 }
 
 @keyframes liquid-bend {
-  0%, 100% {
+  0%,
+  100% {
     transform: rotateZ(0deg) scale(1);
   }
   33% {
@@ -614,11 +618,14 @@ html {
   border-radius: 30px;
   border: 2px solid rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(12px);
-  mask: 
-    radial-gradient(20px at 20px 20px, transparent 50%, black 51%),
+  mask: radial-gradient(20px at 20px 20px, transparent 50%, black 51%),
     radial-gradient(20px at calc(100% - 20px) 20px, transparent 50%, black 51%),
     radial-gradient(20px at 20px calc(100% - 20px), transparent 50%, black 51%),
-    radial-gradient(20px at calc(100% - 20px) calc(100% - 20px), transparent 50%, black 51%);
+    radial-gradient(
+      20px at calc(100% - 20px) calc(100% - 20px),
+      transparent 50%,
+      black 51%
+    );
   mask-composite: intersect;
   transform-style: preserve-3d;
   overflow: hidden;
@@ -631,18 +638,34 @@ html {
   left: 0;
   right: 0;
   bottom: 0;
-  background: 
-    radial-gradient(ellipse at top left, rgba(255, 255, 255, 0.2) 0%, transparent 60%),
-    radial-gradient(ellipse at top right, rgba(255, 255, 255, 0.15) 0%, transparent 60%),
-    radial-gradient(ellipse at bottom left, rgba(255, 255, 255, 0.1) 0%, transparent 60%),
-    radial-gradient(ellipse at bottom right, rgba(255, 255, 255, 0.15) 0%, transparent 60%);
+  background: radial-gradient(
+      ellipse at top left,
+      rgba(255, 255, 255, 0.2) 0%,
+      transparent 60%
+    ),
+    radial-gradient(
+      ellipse at top right,
+      rgba(255, 255, 255, 0.15) 0%,
+      transparent 60%
+    ),
+    radial-gradient(
+      ellipse at bottom left,
+      rgba(255, 255, 255, 0.1) 0%,
+      transparent 60%
+    ),
+    radial-gradient(
+      ellipse at bottom right,
+      rgba(255, 255, 255, 0.15) 0%,
+      transparent 60%
+    );
   border-radius: inherit;
   pointer-events: none;
   animation: liquid-flow 8s ease-in-out infinite;
 }
 
 @keyframes liquid-flow {
-  0%, 100% {
+  0%,
+  100% {
     transform: scale(1) rotate(0deg);
     opacity: 0.8;
   }
