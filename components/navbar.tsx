@@ -43,7 +43,7 @@ export function Navbar({ isLoggedIn = false, user }: NavbarProps) {
       initial={{ y: -100, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.6, ease: 'easeOut' }}
-      className='sticky top-0 z-50 w-full backdrop-blur-xl bg-background/70 border-b border-border/30 shadow-lg shadow-black/5'
+      className='sticky top-0 z-50 w-full backdrop-blur-xl bg-background/70 shadow-lg shadow-black/5'
     >
       <div className='container mx-auto px-6'>
         <div className='flex h-16 items-center justify-between'>
