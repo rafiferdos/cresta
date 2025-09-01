@@ -2,12 +2,13 @@
 
 import * as React from "react"
 import Link from "next/link"
-import { Search, User, ShoppingBag, Heart, Settings, TrendingUp, Star } from "lucide-react"
+import { Search, User, ShoppingBag, Heart, Settings, TrendingUp, Star, Sparkles, Zap, Gift, Bell } from "lucide-react"
 import { motion } from "motion/react"
 
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
+import { Badge } from "@/components/ui/badge"
 
 interface NavbarProps {
   isLoggedIn?: boolean
@@ -21,20 +22,20 @@ export function Navbar({ isLoggedIn = false, user }: NavbarProps) {
   const [isSearchOpen, setIsSearchOpen] = React.useState(false)
 
   const navLinks = [
-    { href: "/explore", label: "Explore", icon: TrendingUp },
     { href: "/categories", label: "Categories", icon: ShoppingBag },
-    { href: "/trending", label: "Trending", icon: Star },
+    { href: "/trending", label: "Trending", icon: TrendingUp },
+    { href: "/new", label: "New", icon: Sparkles },
+    { href: "/deals", label: "Deals", icon: Gift },
+    { href: "/ai-picks", label: "AI Picks", icon: Zap },
     { href: "/favorites", label: "Favorites", icon: Heart },
-    { href: "/sellers", label: "Sellers", icon: User },
-    { href: "/about", label: "About", icon: Settings },
   ]
 
   return (
     <motion.nav
       initial={{ y: -100, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
-      transition={{ duration: 0.5, ease: "easeOut" }}
-      className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60"
+      transition={{ duration: 0.6, ease: "easeOut" }}
+      className="sticky top-0 z-50 w-full backdrop-blur-xl bg-background/70 border-b border-border/30 shadow-lg shadow-black/5"
     >
       <div className="container mx-auto px-4">
         <div className="flex h-16 items-center justify-between">
