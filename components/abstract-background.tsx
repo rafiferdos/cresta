@@ -18,17 +18,17 @@ export function AbstractBackground() {
 
   const colors = [
     'rgba(255, 105, 180, 0.4)', // Hot Pink
-    'rgba(64, 224, 208, 0.4)',  // Turquoise
-    'rgba(255, 165, 0, 0.4)',   // Orange
-    'rgba(138, 43, 226, 0.4)',  // Blue Violet
-    'rgba(50, 205, 50, 0.4)',   // Lime Green
-    'rgba(255, 69, 0, 0.4)',    // Red Orange
-    'rgba(0, 191, 255, 0.4)',   // Deep Sky Blue
-    'rgba(255, 20, 147, 0.4)',  // Deep Pink
-    'rgba(124, 252, 0, 0.4)',   // Lawn Green
-    'rgba(255, 215, 0, 0.4)',   // Gold
-    'rgba(147, 0, 211, 0.4)',   // Dark Violet
-    'rgba(0, 255, 255, 0.4)',   // Cyan
+    'rgba(64, 224, 208, 0.4)', // Turquoise
+    'rgba(255, 165, 0, 0.4)', // Orange
+    'rgba(138, 43, 226, 0.4)', // Blue Violet
+    'rgba(50, 205, 50, 0.4)', // Lime Green
+    'rgba(255, 69, 0, 0.4)', // Red Orange
+    'rgba(0, 191, 255, 0.4)', // Deep Sky Blue
+    'rgba(255, 20, 147, 0.4)', // Deep Pink
+    'rgba(124, 252, 0, 0.4)', // Lawn Green
+    'rgba(255, 215, 0, 0.4)', // Gold
+    'rgba(147, 0, 211, 0.4)', // Dark Violet
+    'rgba(0, 255, 255, 0.4)', // Cyan
   ]
 
   useEffect(() => {
