@@ -78,7 +78,7 @@
 body {
   color: hsl(var(--foreground));
   background: hsl(var(--background));
-  font-feature-settings: "rlig" 1, "calt" 1;
+  font-feature-settings: 'rlig' 1, 'calt' 1;
 }
 
 /* Glassmorphism Effects */
@@ -123,6 +123,6 @@ button {
 
 /* Hide scrollbar for IE, Edge and Firefox */
 .no-scrollbar {
-  -ms-overflow-style: none;  /* IE and Edge */
-  scrollbar-width: none;  /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
 }
