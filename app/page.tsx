@@ -1,11 +1,9 @@
-import React from 'react';
+import React from 'react'
 
 const page = () => {
   return (
     <div>
-      <h1 contentEditable={true} spellCheck={false}>
-        Made by cubiq.
-      </h1>
+      <h1 spellCheck={false}>Made by cubiq.</h1>
       <nav className='glass'>
         <div className='icons'>
           <svg className='icon'>
@@ -689,6 +687,6 @@ const page = () => {
       </svg>
     </div>
   )
-};
+}
 
-export default page;
+export default page
