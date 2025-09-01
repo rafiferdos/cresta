@@ -23,6 +23,7 @@ import {
 } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
 import { Item } from '@/lib/items'
+import { LiquidGlassDemo } from '@/components/liquid-glass-demo'
 
 interface MarketplaceContentProps {
   items: Item[]
